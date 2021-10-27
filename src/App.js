@@ -1,6 +1,7 @@
 import { HashRouter } from "react-router-dom";
 import "./App.scss";
 import Header from "./component/Header";
+import Notice from "./component/Notice";
 import Visual from "./component/Visual";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <HashRouter>
       <Header />
       <Visual />
+      <Notice />
     </HashRouter>
   );
 }
