@@ -6,15 +6,20 @@ import {
   AiOutlineToTop,
 } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+// import "swiper/components/navigation/navigation.scss";
+// import "swiper/components/pagination/pagination.scss";
 import "./Notice.scss";
 import { useRef, useState } from "react";
 
+SwiperCore.use([Navigation, Pagination, Autoplay]);
+
 const Notice = () => {
-  const navigationPrevRef = useRef();
+  const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
-  const pagination = useRef(null);
   const [isHidePromotion, setIsHidePromotion] = useState(false);
   const onClick = () => {
     setIsHidePromotion(!isHidePromotion);
@@ -84,12 +89,11 @@ const Notice = () => {
           spaceBetween={10}
           centeredSlides={true}
           pagination={{
-            el: pagination.current,
-            clickable: "true",
+            clickable: true,
           }}
           navigation={{
-            prevEl: navigationPrevRef.current,
-            nextEl: navigationNextRef.current,
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
           }}
         >
           <div className="swiper-wrapper">
@@ -139,13 +143,12 @@ const Notice = () => {
               </Link>
             </SwiperSlide>
           </div>
-          <div className="swiper-pagination" ref={pagination}></div>
-          <div className="swiper-prev" ref={navigationPrevRef}>
+          <div className="swiper-button-prev" ref={navigationPrevRef}>
             <div className="material-icons">
               <AiOutlineArrowLeft />
             </div>
           </div>
-          <div className="swiper-next" ref={navigationNextRef}>
+          <div className="swiper-button-next" ref={navigationNextRef}>
             <div className="material-icons">
               <AiOutlineArrowRight />
             </div>
