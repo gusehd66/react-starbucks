@@ -2,6 +2,7 @@ import { HashRouter } from "react-router-dom";
 import "./App.scss";
 import Header from "./component/Header";
 import Notice from "./component/Notice";
+import Rewards from "./component/Rewards";
 import Visual from "./component/Visual";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Visual />
       <Notice />
+      <Rewards />
     </HashRouter>
   );
 }
