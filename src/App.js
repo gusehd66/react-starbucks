@@ -3,6 +3,7 @@ import "./App.scss";
 import Header from "./component/Header";
 import Notice from "./component/Notice";
 import Product from "./component/Product";
+import Reserve from "./component/Reserve";
 import Rewards from "./component/Rewards";
 import Visual from "./component/Visual";
 import Youtube from "./component/Youtube";
@@ -16,6 +17,7 @@ function App() {
       <Rewards />
       <Youtube />
       <Product />
+      <Reserve />
     </HashRouter>
   );
 }
