@@ -1,5 +1,6 @@
 import { HashRouter } from "react-router-dom";
 import "./App.scss";
+import Favorite from "./component/Favorite";
 import Header from "./component/Header";
 import Notice from "./component/Notice";
 import Product from "./component/Product";
@@ -18,6 +19,7 @@ function App() {
       <Youtube />
       <Product />
       <Reserve />
+      <Favorite />
     </HashRouter>
   );
 }

@@ -6,10 +6,10 @@ import ScrollMagic from "scrollmagic";
 const Reserve = () => {
   useEffect(() => {
     new ScrollMagic.Scene({
-      triggerElement: ".scroll-spy", //보여짐 여부를 감시할 요소를 지정
+      triggerElement: ".reserve-coffee", //보여짐 여부를 감시할 요소를 지정
       triggerHook: 0.8,
     })
-      .setClassToggle(".scroll-spy", "show")
+      .setClassToggle(".reserve-coffee", "show")
       .addTo(new ScrollMagic.Controller());
   });
 

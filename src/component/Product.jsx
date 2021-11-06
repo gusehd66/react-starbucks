@@ -22,10 +22,10 @@ const Product = () => {
   useEffect(() => {
     floatingObject(".floating3", 1.5, 20);
     new ScrollMagic.Scene({
-      triggerElement: ".scroll-spy", //보여짐 여부를 감시할 요소를 지정
+      triggerElement: ".season-product", //보여짐 여부를 감시할 요소를 지정
       triggerHook: 0.8,
     })
-      .setClassToggle(".scroll-spy", "show")
+      .setClassToggle(".season-product", "show")
       .addTo(new ScrollMagic.Controller());
   });
 
