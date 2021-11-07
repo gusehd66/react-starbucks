@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Reserve.scss";
+import "./ReserveCoffee.scss";
 import ScrollMagic from "scrollmagic";
 
-const Reserve = () => {
+const ReserveCoffee = () => {
   useEffect(() => {
     new ScrollMagic.Scene({
       triggerElement: ".reserve-coffee", //보여짐 여부를 감시할 요소를 지정
@@ -45,4 +45,4 @@ const Reserve = () => {
   );
 };
 
-export default Reserve;
+export default ReserveCoffee;
