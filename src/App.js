@@ -1,6 +1,8 @@
 import { HashRouter } from "react-router-dom";
 import "./App.scss";
+// import Awards from './component/Awards';
 import Favorite from "./component/Favorite";
+import FindStore from "./component/FindStore";
 import Header from "./component/Header";
 import Notice from "./component/Notice";
 import Product from "./component/Product";
@@ -22,6 +24,8 @@ function App() {
       <ReserveCoffee />
       <Favorite />
       <ReserveStore />
+      <FindStore />
+      {/* <Awards/> */}
     </HashRouter>
   );
 }

@@ -17,7 +17,7 @@ const ReserveStore = () => {
               src={require("../images/reserve_store_medal_back.png").default}
               alt="스타벅스 리저브 매장"
             />
-            <Link href="/" className="btn">
+            <Link to="/" className="btn">
               매장안내
             </Link>
           </div>
