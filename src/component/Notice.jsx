@@ -10,8 +10,6 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
-// import "swiper/components/navigation/navigation.scss";
-// import "swiper/components/pagination/pagination.scss";
 import "./Notice.scss";
 import { useRef, useState } from "react";
 
@@ -92,8 +90,8 @@ const Notice = () => {
             clickable: true,
           }}
           navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-prev",
+            nextEl: ".swiper-next",
           }}
         >
           <div className="swiper-wrapper">
@@ -143,12 +141,12 @@ const Notice = () => {
               </Link>
             </SwiperSlide>
           </div>
-          <div className="swiper-button-prev" ref={navigationPrevRef}>
+          <div className="swiper-prev" ref={navigationPrevRef}>
             <div className="material-icons">
               <AiOutlineArrowLeft />
             </div>
           </div>
-          <div className="swiper-button-next" ref={navigationNextRef}>
+          <div className="swiper-next" ref={navigationNextRef}>
             <div className="material-icons">
               <AiOutlineArrowRight />
             </div>

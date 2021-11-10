@@ -135,15 +135,15 @@
 .notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
   background-image: url("../images/promotion_slide_pager_on.png");
 }
-.notice .promotion .swiper-button-prev,
-.notice .promotion .swiper-button-next {
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
   color: #333;
   width: 42px;
   height: 42px;
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
-  top: 300px;
+  top: 265px;
   z-index: 9;
   cursor: pointer;
   outline: none;
@@ -152,21 +152,16 @@
   align-items: center;
   transition: 0.4s;
 }
-.notice .promotion .swiper-button-prev {
+.notice .promotion .swiper-prev {
   left: 50%;
   margin-left: -480px;
 }
-.notice .promotion .swiper-button-next {
+.notice .promotion .swiper-next {
   right: 50%;
   margin-right: -480px;
 }
-.notice .promotion .swiper-button-prev:hover,
-.notice .promotion .swiper-button-next:hover {
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
   background-color: #333;
   color: #fff;
-}
-
-.notice .promotion .swiper-button-prev::after,
-.notice .promotion .swiper-button-next::after {
-  display: none;
 }
