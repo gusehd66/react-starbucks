@@ -3,6 +3,7 @@ import "./App.scss";
 import Awards from "./component/Awards";
 import Favorite from "./component/Favorite";
 import FindStore from "./component/FindStore";
+import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Notice from "./component/Notice";
 import Product from "./component/Product";
@@ -26,6 +27,7 @@ function App() {
       <ReserveStore />
       <FindStore />
       <Awards />
+      <Footer />
     </HashRouter>
   );
 }
