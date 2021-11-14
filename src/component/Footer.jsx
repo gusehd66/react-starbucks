@@ -40,7 +40,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div class="info">
+        <div className="info">
           <span>사업자 등록번호 201-81-21515</span>
           <span>(주)스타벅스 코리아 대표이사 이석구</span>
           <span> {"TEL: 02) 3015-1100 / FAX : 02) 3015-1106"}</span>
