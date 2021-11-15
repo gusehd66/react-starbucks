@@ -3,7 +3,6 @@ import "./Header.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useRef } from "react";
 import HeaderFactory from "./HeaderFactory";
-import Badges from "./Badges";
 
 const activeStyle = { color: "blue" };
 
@@ -75,7 +74,6 @@ const Header = () => {
           <HeaderFactory />
         </ul>
       </div>
-      <Badges />
     </header>
   );
 };

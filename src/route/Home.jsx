@@ -11,6 +11,7 @@ import Visual from "../component/Visual";
 import Youtube from "../component/Youtube";
 import gsap from "gsap";
 import { throttle } from "lodash";
+import Badges from "../component/Badges";
 
 const Home = () => {
   window.addEventListener(
@@ -42,6 +43,7 @@ const Home = () => {
   );
   return (
     <>
+      <Badges />
       <Visual />
       <Notice />
       <Rewards />
