@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { useRef } from "react";
 import HeaderFactory from "./HeaderFactory";
 
-const activeStyle = { color: "blue" };
+const activeStyle = { color: "#669900" };
 
 const Header = () => {
   const searchEl = useRef(null);

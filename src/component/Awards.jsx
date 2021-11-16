@@ -7,6 +7,18 @@ import "swiper/swiper.min.css";
 import { useRef } from "react";
 
 SwiperCore.use([Navigation, Autoplay]);
+const alts = [
+  "대통령 표창",
+  "대통령 표창 (3년 연속)",
+  "우수사업주 인증",
+  "경연대회 대상",
+  "대한상의회장상",
+  "기업사회공헌 활동 부문",
+  "KSI 1위 (5년 연속)",
+  "KS-SQI 1위 (5년 연속)",
+  "커피전문점 부문 (4년 연속)",
+  "동반성장 부문 (4년 연속)",
+];
 
 const Awards = () => {
   const navigationPrevRef = useRef(null);
@@ -26,66 +38,18 @@ const Awards = () => {
           }}
         >
           <div className="swiper-wrapper">
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide1.jpg").default}
-                alt="대통령 표창"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide2.jpg").default}
-                alt="대통령 표창 (3년 연속)"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide3.jpg").default}
-                alt="우수사업주 인증"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide4.jpg").default}
-                alt="경연대회 대상"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide5.jpg").default}
-                alt="대한상의회장상"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide6.jpg").default}
-                alt="기업사회공헌 활동 부문"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide7.jpg").default}
-                alt="KSI 1위 (5년 연속)"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide8.jpg").default}
-                alt="KS-SQI 1위 (5년 연속)"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide9.jpg").default}
-                alt="커피전문점 부문 (4년 연속)"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img
-                src={require("../images/awards_slide10.jpg").default}
-                alt="동반성장 부문 (4년 연속)"
-              />
-            </SwiperSlide>
+            {alts.map((alt, idx) => {
+              return (
+                <SwiperSlide className="swiper-slide" key={idx}>
+                  <img
+                    src={
+                      require(`../images/awards_slide${idx + 1}.jpg`).default
+                    }
+                    alt={alt}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </div>
         </Swiper>
 

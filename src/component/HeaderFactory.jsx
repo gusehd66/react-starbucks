@@ -1,4 +1,4 @@
-import { contents } from "../data/contents";
+import { contents } from "../data/HeaderContents";
 
 const HeaderFactory = () => {
   return (
