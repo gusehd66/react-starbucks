@@ -40,7 +40,7 @@ const Awards = () => {
           <div className="swiper-wrapper">
             {alts.map((alt, idx) => {
               return (
-                <SwiperSlide className="swiper-slide" key={idx}>
+                <SwiperSlide className="swiper-slide" key={alt}>
                   <img
                     src={
                       require(`../images/awards_slide${idx + 1}.jpg`).default

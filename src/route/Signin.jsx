@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
 import "./Signin.scss";
+import { useState } from "react";
+import KakaoLogin from "react-kakao-login";
+import * as config from "../config";
+
+const jsKey = config.KAKAO_JSKEY;
+
 const SignIn = () => {
+  const [data, setData] = useState("kakao");
+
+  const responseKaKao = (res) => {
+    setData(res);
+  };
+  const responseFail = (err) => {
+    alert(err);
+  };
+  console.log(data);
   return (
     <section className="signin">
       <h1>로그인</h1>
@@ -9,9 +24,23 @@ const SignIn = () => {
           <strong>Welcome! </strong>스타벅스에 오신 것을 환영합니다.
         </h2>
         <form>
-          <input type="text" placeholder="아이디를 입력하세요." />
-          <input type="password" placeholder="비밀번호를 입력하세요." />
-          <input type="submit" value="로그인" />
+          <input type="text" placeholder="아이디를 입력하세요." disabled />
+          <input
+            type="password"
+            placeholder="비밀번호를 입력하세요."
+            disabled
+          />
+          {/* <input type="submit" value="로그인" /> */}
+          <KakaoLogin
+            token={jsKey}
+            buttonText="KaKao"
+            onSuccess={responseKaKao}
+            onFailure={responseFail}
+            getProfile={true}
+            className="kakao"
+          >
+            카카오로 로그인 하기
+          </KakaoLogin>
           <p>
             * 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니,
             <br />
