@@ -1,14 +1,16 @@
 import { NavLink } from "react-router-dom";
 import "./Header.scss";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import HeaderFactory from "./HeaderFactory";
+import { ProfileContext } from "../context/context";
 
 const activeStyle = { color: "#669900" };
 
 const Header = () => {
   const searchEl = useRef(null);
   const searchInputEl = useRef(null);
+  const { id } = useContext(ProfileContext);
 
   const onClick = () => {
     searchInputEl.current.focus();
@@ -37,9 +39,15 @@ const Header = () => {
         <div className="sub-menu">
           <ul className="menu">
             <li>
-              <NavLink to="/signin" activeStyle={activeStyle}>
-                Signin
-              </NavLink>
+              {id === "" ? (
+                <NavLink to="/signin" activeStyle={activeStyle}>
+                  Signin
+                </NavLink>
+              ) : (
+                <NavLink to="/signin" id="nickname">
+                  {id}
+                </NavLink>
+              )}
             </li>
             <li>
               <NavLink to="/myStartbucks" activeStyle={activeStyle}>

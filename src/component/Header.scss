@@ -50,6 +50,13 @@ header {
             text-decoration: underline;
           }
         }
+        #nickname {
+          color: #000;
+          &::after {
+            content: "님";
+            font-size: 12px;
+          }
+        }
       }
     }
     .search {

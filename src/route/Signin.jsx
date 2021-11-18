@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import "./Signin.scss";
-import { useState } from "react";
+import { useContext } from "react";
 import KakaoLogin from "react-kakao-login";
 import * as config from "../config";
+import { ProfileContext } from "../context/context";
 
 const jsKey = config.KAKAO_JSKEY;
 
 const SignIn = () => {
-  const [data, setData] = useState("kakao");
+  const { setId } = useContext(ProfileContext);
 
   const responseKaKao = (res) => {
-    setData(res);
+    setId(res.profile.properties.nickname);
   };
   const responseFail = (err) => {
     alert(err);
   };
-  console.log(data);
   return (
     <section className="signin">
       <h1>로그인</h1>
