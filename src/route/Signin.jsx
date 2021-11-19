@@ -5,7 +5,7 @@ import KakaoLogin from "react-kakao-login";
 import { ProfileContext } from "../context/context";
 
 const SignIn = () => {
-  const { id, setId } = useContext(ProfileContext);
+  const { setId } = useContext(ProfileContext);
   const history = useHistory();
 
   const responseKaKao = (res) => {
