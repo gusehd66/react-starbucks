@@ -2,10 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import "./Signin.scss";
 import { useContext } from "react";
 import KakaoLogin from "react-kakao-login";
-import * as config from "../config";
 import { ProfileContext } from "../context/context";
-
-const jsKey = config.KAKAO_JSKEY;
 
 const SignIn = () => {
   const { id, setId } = useContext(ProfileContext);
@@ -35,7 +32,7 @@ const SignIn = () => {
           />
           {/* <input type="submit" value="로그인" /> */}
           <KakaoLogin
-            token={jsKey}
+            token={process.env.REACT_APP_JSKEY}
             buttonText="KaKao"
             onSuccess={responseKaKao}
             onFailure={responseFail}
