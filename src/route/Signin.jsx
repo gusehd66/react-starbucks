@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Signin.scss";
 import { useContext } from "react";
 import KakaoLogin from "react-kakao-login";
@@ -8,10 +8,13 @@ import { ProfileContext } from "../context/context";
 const jsKey = config.KAKAO_JSKEY;
 
 const SignIn = () => {
-  const { setId } = useContext(ProfileContext);
+  const { id, setId } = useContext(ProfileContext);
+  const history = useHistory();
 
   const responseKaKao = (res) => {
     setId(res.profile.properties.nickname);
+    window.localStorage.setItem("nickname", res.profile.properties.nickname);
+    history.push("/");
   };
   const responseFail = (err) => {
     alert(err);

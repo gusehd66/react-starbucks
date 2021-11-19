@@ -10,7 +10,7 @@ const activeStyle = { color: "#669900" };
 const Header = () => {
   const searchEl = useRef(null);
   const searchInputEl = useRef(null);
-  const { id } = useContext(ProfileContext);
+  const { id, setId } = useContext(ProfileContext);
 
   const onClick = () => {
     searchInputEl.current.focus();
@@ -26,6 +26,11 @@ const Header = () => {
     searchInputEl.current.setAttribute("placeholder", "");
   };
 
+  const logout = async () => {
+    window.localStorage.removeItem("nickname");
+    setId(window.localStorage.getItem("username"));
+  };
+
   return (
     <header>
       <div className="inner">
@@ -39,13 +44,13 @@ const Header = () => {
         <div className="sub-menu">
           <ul className="menu">
             <li>
-              {id === "" ? (
+              {!id ? (
                 <NavLink to="/signin" activeStyle={activeStyle}>
                   Signin
                 </NavLink>
               ) : (
-                <NavLink to="/signin" id="nickname">
-                  {id}
+                <NavLink to="/" onClick={logout}>
+                  Signout
                 </NavLink>
               )}
             </li>

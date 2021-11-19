@@ -8,14 +8,14 @@ import Home from "./route/Home";
 import SignIn from "./route/Signin";
 
 function App() {
-  const [id, setId] = useState("");
+  const [id, setId] = useState(window.localStorage.getItem("username"));
 
   return (
     <HashRouter>
       <ProfileContext.Provider value={{ id, setId }}>
         <Header />
-        <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/" component={Home} />
         <Footer />
       </ProfileContext.Provider>
     </HashRouter>
