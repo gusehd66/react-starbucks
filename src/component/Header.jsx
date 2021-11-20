@@ -55,9 +55,13 @@ const Header = () => {
               )}
             </li>
             <li>
-              <NavLink to="/myStartbucks" activeStyle={activeStyle}>
-                My Starbucks
-              </NavLink>
+              {!id ? (
+                <NavLink to="/signin">My Starbucks</NavLink>
+              ) : (
+                <NavLink to="/myStartbucks" activeStyle={activeStyle}>
+                  My Starbucks
+                </NavLink>
+              )}
             </li>
             <li>
               <NavLink to="/service" activeStyle={activeStyle}>
