@@ -4,7 +4,7 @@ import "./App.scss";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
 import { ProfileContext } from "./context/context";
-import CustomerService from "./route/CustomerService";
+import Service from "./route/Service";
 import Home from "./route/Home";
 import SignIn from "./route/Signin";
 
@@ -16,7 +16,7 @@ function App() {
       <ProfileContext.Provider value={{ id, setId }}>
         <Header />
         <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/service" component={CustomerService} />
+        <Route exact path="/service" component={Service} />
         <Route exact path="/" component={Home} />
         <Footer />
       </ProfileContext.Provider>

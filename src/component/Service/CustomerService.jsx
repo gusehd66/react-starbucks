@@ -6,19 +6,19 @@ const CustomerService = () => {
     <section className="customer-service">
       <div className="service-header">
         <div className="inner">
-          <h2 className="subtitle">Customer Service & Ideas</h2>
+          <h2 className="title">Customer Service & Ideas</h2>
           <ul className="smap">
             <li>
               <Link to="/">
                 <img
-                  src={require("../images/customer/icon_home_w.png").default}
+                  src={require("../../images/customer/icon_home_w.png").default}
                   alt="home"
                 />
               </Link>
             </li>
             <li>
               <img
-                src={require("../images/customer/icon_arrow_w.png").default}
+                src={require("../../images/customer/icon_arrow_w.png").default}
                 alt="arrow"
               />
             </li>
