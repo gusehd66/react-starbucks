@@ -1,4 +1,6 @@
+import "./Service.scss";
 import CustomerService from "../component/Service/CustomerService";
+import Faq from "../component/Service/Faq";
 import Question from "../component/Service/Question";
 
 const Service = () => {
@@ -6,7 +8,10 @@ const Service = () => {
     <>
       <CustomerService />
       <div className="inner">
-        <Question />
+        <div className="inner-main">
+          <Question />
+          <Faq />
+        </div>
       </div>
     </>
   );

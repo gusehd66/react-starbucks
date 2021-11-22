@@ -1,0 +1,63 @@
+.faq {
+  border: solid 1px #ddd;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  font-size: 13px;
+  strong {
+    font-size: 20px;
+  }
+  p {
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  .faq-main {
+    width: 65%;
+    border-right: solid 1px #ddd;
+
+    ul {
+      font-size: 12px;
+      padding-left: 20px;
+      color: #666;
+      li {
+        list-style-type: disc;
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .customer-voice {
+    width: 35%;
+    box-sizing: border-box;
+    padding: 0 10px 0 30px;
+    .login {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      span {
+        width: 100px;
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
+    .login-btn {
+      background: #e2c383;
+      border: 1px solid #bb9f65;
+      border-radius: 3px;
+      color: #222;
+      float: left;
+      font-size: 12px;
+      font-weight: bold;
+      height: 28px;
+      line-height: 28px;
+      margin-top: 25px;
+      text-align: center;
+      width: 235px;
+    }
+  }
+}
